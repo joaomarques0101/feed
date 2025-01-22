@@ -1,0 +1,350 @@
+ 
+ 
+ /* Reset de estilos padrões */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo geral do body */
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Design do cabeçalho */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav .nav-links li a:hover {
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+
+.search input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.search button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Layout do Feed */
+.feed {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Design de Postagem */
+.post {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post .user-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.post .user-info .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.post .user-info .avatar:hover {
+    transform: scale(1.1);
+}
+
+.post .user-info .username {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Conteúdo da postagem */
+.post .post-content {
+    margin-top: 20px;
+}
+
+/* Carrossel */
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel {
+    display: flex; /* Manter as imagens em linha */
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+/* Botões de navegação */
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        width: 100%;
+    }
+
+    .carousel-image {
+        max-width: 80%; /* Ajusta a largura das imagens */
+    }
+
+    .carousel-btn {
+        font-size: 20px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        display: none;
+    }
+
+    .search input {
+        width: 200px;
+    }
+
+    .post .carousel-image {
+        width: 100%;
+    }
+}
+
+/* Ações de interação */
+.post .post-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.post .like-btn,
+.post .comment-btn,
+.post .share-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #007bff;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.post .like-btn:hover,
+.post .comment-btn:hover,
+.post .share-btn:hover {
+    color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.post .likes {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post .comments {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.post .add-comment {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.post .add-comment input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.post .add-comment input:focus {
+    border-color: #007bff;
+}
+
+.post .add-comment button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.post .add-comment button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Transições suaves para todos os botões */
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #007bff;
+}
+.comment-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/* Adiciona regras para tornar o vídeo responsivo */
+.post-video {
+    width: 100%; /* Faz o vídeo ocupar toda a largura do container */
+    max-width: 600px; /* Define uma largura máxima para o vídeo */
+    height: auto; /* Mantém a proporção do vídeo */
+    display: block; /* Garante que o vídeo seja exibido corretamente */
+    margin: 0 auto; /* Centraliza o vídeo dentro do post */
+}
