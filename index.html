@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySocial</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MySocial</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul>  
+        </nav>
+    </header>
+    <main>
+        <!-- Feed Section -->
+        <section class="feed">
+            <!-- Post 1 -->
+            <div class="post" id="post-1">
+                <div class="user-info">
+                    <img src="6.jpg" alt="User 1" class="avatar">
+                    <span class="username">User1</span>
+                    <span class="timestamp">2h ago</span>
+                </div>
+                <div class="post-content">
+                    <div class="carousel">
+                        <img src="2.jpg" alt="Post Image 1" class="carousel-image">
+                        <img src="1.jpg" alt="Post Image 2" class="carousel-image">
+                    </div>
+                </div>
+                <div class="post-actions">
+                    <button class="like-btn" id="like-btn-1" onclick="increaseLikes(1)">❤️ Like</button>
+                    <button class="comment-btn" onclick="toggleCommentBox(1)">💬 Comment</button>
+                </div>
+                <div class="likes">
+                    <span id="likes-count-1">1,200 Likes</span>
+                </div>
+                <div class="comments" id="comments-1">
+                    <p><strong>User2:</strong> Amazing post!</p>
+                    <p><strong>User3:</strong> I love it!</p>
+                </div>
+                <div class="add-comment" id="comment-box-1" style="display:none;">
+                    <input type="text" id="comment-input-1" placeholder="Add a comment...">
+                    <button onclick="addComment(1)">Post</button>
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="post" id="post-2">
+                <div class="user-info">
+                    <img src="4.jpg" alt="User 2" class="avatar">
+                    <span class="username">User2</span>
+                    <span class="timestamp">3h ago</span>
+                </div>
+                <div class="post-content">
+                    <video src="video principal .mp4" class="post-video" controls></video>
+                </div>
+                <div class="post-actions">
+                    <button class="like-btn" id="like-btn-2" onclick="increaseLikes(2)">❤️ Like</button>
+                    <button class="comment-btn" onclick="toggleCommentBox(2)">💬 Comment</button>
+                </div>
+                <div class="likes">
+                    <span id="likes-count-2">800 Likes</span>
+                </div>
+                <div class="comments" id="comments-2">
+                    <p><strong>User4:</strong> Great shot!</p>
+                    <p><strong>User5:</strong> This looks amazing!</p>
+                </div>
+                <div class="add-comment" id="comment-box-2" style="display:none;">
+                    <input type="text" id="comment-input-2" placeholder="Add a comment...">
+                    <button onclick="addComment(2)">Post</button>
+                </div>
+            </div>
+             <!-- Feed Section -->
+        <section class="feed">
+            <!-- Post 1 -->
+            <div class="post" id="post-1">
+                <div class="user-info">
+                    <img src="6.jpg" alt="User 1" class="avatar">
+                    <span class="username">User1</span>
+                    <span class="timestamp">2h ago</span>
+                </div>
+                <div class="post-content">
+                    <div class="carousel">
+                        <img src="2.jpg" alt="Post Image 1" class="carousel-image">
+
+                    </div>
+                </div>
+                <div class="post-actions">
+                    <button class="like-btn" id="like-btn-1" onclick="increaseLikes(1)">❤️ Like</button>
+                    <button class="comment-btn" onclick="toggleCommentBox(1)">💬 Comment</button>
+                </div>
+                <div class="likes">
+                    <span id="likes-count-1">1,200 Likes</span>
+                </div>
+                <div class="comments" id="comments-1">
+                    <p><strong>User2:</strong> Amazing post!</p>
+                    <p><strong>User3:</strong> I love it!</p>
+                </div>
+                <div class="add-comment" id="comment-box-1" style="display:none;">
+                    <input type="text" id="comment-input-1" placeholder="Add a comment...">
+                    <button onclick="addComment(1)">Post</button>
+                </div>
+            </div>
+ <!-- Feed Section -->
+ <section class="feed">
+    <!-- Post 1 -->
+    <div class="post" id="post-1">
+        <div class="user-info">
+            <img src="6.jpg" alt="User 1" class="avatar">
+            <span class="username">User1</span>
+            <span class="timestamp">2h ago</span>
+        </div>
+        <div class="post-content">
+            <div class="carousel">
+                <img src="2.jpg" alt="Post Image 1" class="carousel-image">
+
+            </div>
+        </div>
+        <div class="post-actions">
+            <button class="like-btn" id="like-btn-1" onclick="increaseLikes(1)">❤️ Like</button>
+            <button class="comment-btn" onclick="toggleCommentBox(1)">💬 Comment</button>
+        </div>
+        <div class="likes">
+            <span id="likes-count-1">1,200 Likes</span>
+        </div>
+        <div class="comments" id="comments-1">
+            <p><strong>User2:</strong> Amazing post!</p>
+            <p><strong>User3:</strong> I love it!</p>
+        </div>
+        <div class="add-comment" id="comment-box-1" style="display:none;">
+            <input type="text" id="comment-input-1" placeholder="Add a comment...">
+            <button onclick="addComment(1)">Post</button>
+        </div>
+    </div>
+
+
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Help</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Contact</a>
+        </div>
+        <p>MySocial &copy; 2025</p>
+    </footer>
+</body>
+</html>
